@@ -500,6 +500,8 @@ color: var(--main-title-color);
     height: 40px;
     padding: 0 16px;
     background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
     border-radius: 4px;
     color: var(--main-title-color);
     border: 1px solid rgba(255, 255, 255, 0.3);

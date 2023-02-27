@@ -748,7 +748,7 @@ color: var(--accent-color);
         line-height: 1.17;
         letter-spacing: 0.04em;  
 }
-.inp {margin-top: 16px; }
+.inp {margin-bottom: 16px; }
 .checkbox-text {
     display: flex;
     align-items: center;

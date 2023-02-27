@@ -185,6 +185,7 @@ margin-right: auto;
     background-color: var(--pre-color);
     border-radius: 4px;
     padding:12px 24px;
+    transition: background-color var(--tra), color var(--tra), box-shadow var(--tra);
 }
 
 .button-list {
@@ -206,13 +207,13 @@ margin-right: auto;
 .btn:hover, .btn:focus {background-color: var(--alternative-color);
 color: var(--main-title-color);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-transition: background-color var(--tra), color var(--tra), box-shadow var(--tra);
- }
+}
 .btn-style {
     color: var(--main-title-color);
-    background-color: var(--another-color);}
-    .btn-style:hover, .btn-style:focus {background-color: var(--alternative-color);
+    background-color: var(--another-color);
     transition: background-color var(--tra);}
+    .btn-style:hover, .btn-style:focus {background-color: var(--alternative-color);
+    }
 /* --------------------------about-------------------- */
 .about {
     padding-top: 120px;
@@ -528,11 +529,11 @@ color: var(--main-title-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--another-color);
     cursor: pointer;
+    transition: background-color var(--tra);
     
 }
 .sub-btn:is(:hover, :focus) {
     background-color: var(--alternative-color);
-    transition: background-color var(--tra);
 }
 .sub-icon{
     margin-left: auto;
@@ -668,14 +669,14 @@ color: var(--accent-color);
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin-bottom: 24px;
     top: 24px;
     right: 24px;
     cursor: pointer;
-    transition: background-color var(--tra);
+    transition: background-color var(--tra), fill var(--main-title-color);
 }
 .modal-close:is(:hover,:focus){
     background-color: var(--alternative-color);  
+    fill: var(--main-title-color);
 }
 .modal-title {
         font-weight: 500;
@@ -704,31 +705,29 @@ color: var(--accent-color);
 }
 .modal-icons{
     position: absolute;
-    bottom: 8px;
     left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 8px;
     transition: fill var(--tra);
 }
-.input-wrap {
-    display: flex;
-    margin-bottom: 8px;
-    position: relative;
-}
+
 /* .modal-input:not(:focus):not(:placeholder-shown):valid {
     background-color : rgb(7, 201, 65);
 }
 .modal-input:not(:focus):not(:placeholder-shown):invalid{
     background-color: rgb(205, 8, 8);
 } */
-
+.lab {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    position: relative;
+}
 .input-text {
-    font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--border-color);
-    display: inline-block;
+
     margin-bottom: 4px;
 }
 .modal-message {
@@ -748,8 +747,8 @@ color: var(--accent-color);
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.04em;  
-        color: rgba(117, 117, 117, 0.5);
 }
+.inp {margin-top: 16px; }
 .checkbox-text {
     display: flex;
     align-items: center;
@@ -757,14 +756,15 @@ color: var(--accent-color);
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.04em;
-        color: #757575;
-        margin-top: 16px;     
+        color: #757575;    
 }
 .priv{
     color: var(--another-color);
     text-decoration: underline;
 }
-
+.check-icon {
+    
+}
 
 
 .checkbox-text span {
@@ -776,14 +776,14 @@ color: var(--accent-color);
             display: flex;
             align-items: center;
             justify-content: center;
-            fill: transparent;
+            fill: transparent;          
 }
 
 .input-check:checked + .checkbox-text span {
             background-color: var(--accent-color);
             border: none;
-            fill: #ffffff;
-            background: var(--alternative-color)
+            fill: var(--main-title-color);
+            background: var(--alternative-color);
 }
 .cb-btn {
     display: block;
@@ -800,8 +800,8 @@ color: var(--accent-color);
     border-radius: 4px;
     margin-top: 24px;
     margin-right: auto;
-    margin-left: auto;}
+    margin-left: auto;
+    transition: background-color var(--tra);}
 
 .cb-btn:hover, .cb-btn:focus {background-color: var(--alternative-color);
-    transition: background-color var(--tra);
 }
